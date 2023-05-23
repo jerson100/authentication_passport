@@ -5,6 +5,7 @@ import ProtectedRouter from "../common/ProtectedRouter";
 import HomePage from "../../pages/public/HomePage/HomePage";
 import ProtectedPage from "../../pages/private/ProtectedPage";
 import RedirectIsSession from "../common/RedirectIsSession";
+import ProductsPage from "../../pages/private/ProductsPage";
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/" element={<ProtectedRouter />}>
           <Route path="protected" element={<ProtectedPage />} />
+          <Route path="products" element={<ProductsPage />} />
         </Route>
       </Routes>
     </Router>
